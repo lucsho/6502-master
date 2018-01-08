@@ -1,0 +1,229 @@
+.half {
+	@include span-columns(7);
+}
+
+.display-none {
+	display: none !important;
+}
+
+.visible-none {
+	opacity: 0;
+}
+
+#documentation {
+	padding-top: 50px !important;
+	overflow-y: scroll !important;
+	-webkit-transition: all 175ms ease;
+	-moz-transition: all 175ms ease;
+	-ms-transition: all 175ms ease;
+	-o-transition: all 175ms ease;
+	transition: all 175ms ease;
+
+	img {
+		position: fixed;
+		top: 25px;
+		right: 40px;
+		// left: 92%;
+	}
+}
+
+#widgets {
+	-webkit-transition: all 175ms ease;
+	-moz-transition: all 175ms ease;
+	-ms-transition: all 175ms ease;
+	-o-transition: all 175ms ease;
+	transition: all 175ms ease;
+}
+
+.third {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 30%; }
+  .half:last-child {
+    margin-right: 0; }
+
+.two-thirds {
+  float: left;
+  display: block;
+  margin-right: 0%;
+  width: 70%; }
+  .half:last-child {
+    margin-right: 0; }
+
+.top-square {
+	padding-top: 35px;
+}
+
+canvas.screen {
+	display: block;
+	// width: 14.2857143vw;
+	// height: 14.2857143vw;
+	margin: 0 auto 25px;
+}
+
+.stack {
+	min-width: 250px;
+	width: 80%;
+	max-width: 300px;
+	height: 559px;
+	max-height: 70%;
+	margin: 0 auto;
+	
+	// For bottom to top stacking
+	display: flex;
+  	flex-direction: column-reverse;
+  	overflow-y: scroll;
+
+  	.frame {
+  		width: 100%;
+  		height: 50px;
+		line-height: 50px;
+		margin-top: 2px;
+		color: $color-white;	
+		text-align: center;		
+		background: rgba(255, 255, 255, 0.04);
+
+		.address {
+			@include span-columns(5);
+
+			&.sp {
+				background: rgba(32, 180, 208, 1);
+
+				img {
+					display: inline-block;
+					height: 20px;
+					vertical-align: middle;
+					margin: 0 0 0 -7px;
+				}
+			}
+		}
+
+		.value {
+			@include span-columns(9);
+			background: rgba(255, 255, 255, 0.075);
+		}
+  	}
+}
+
+.registers {
+	min-width: 250px;
+	width: 80%;
+	max-width: 300px;
+	margin: 0 auto;
+
+	.frame {
+  		width: 100%;
+  		height: 50px;
+		line-height: 50px;
+		margin-top: 2px;
+		color: $color-white;	
+		text-align: center;		
+		background: rgba(255, 255, 255, 0.04);
+
+		.address {
+			@include span-columns(5);
+		}
+
+		.value {
+			@include span-columns(9);
+			background: rgba(255, 255, 255, 0.075);
+		}
+  	}	
+}
+
+.monitorControls {
+	min-width: 250px;
+	width: 80%;
+	max-width: 300px;
+	margin: 25px auto 0;
+	color: $color-white;
+	text-align: center;
+
+	input {
+		@extend .button;
+		width: 100%;
+	}
+}
+
+.debugger {
+	min-width: 250px;
+	width: 80%;
+	max-width: 300px;
+	margin: 25px auto 0;
+	color: $color-white;
+	text-align: center;
+
+	input[type="checkbox"] {
+		width: 12px;
+		height: 12px;
+		border: none;
+		border-radius: 0px;
+		outline: none;
+		background: rgba(255, 255, 255, 0.10);
+	}	
+
+	.buttons {
+		input:nth-child(1) {
+			float: left;
+		}
+
+		input:nth-child(2) {
+			float: right;
+		}
+	}
+
+	input[type="button"] {
+		@extend .button;
+		display: inline-block;
+		width: calc(50% - 6px);
+	}
+}
+
+$grid-columns: 12;
+.buttons {
+	input {
+		@extend .button;
+		@include span-columns(4);
+		margin: 0;
+	}
+}
+
+.action-button-container {
+	width: 100%;
+	margin: auto;
+	margin-top: 40px;
+	
+	.button-offset {
+		@include span-columns(3);
+		opacity: 0;
+		cursor: default;
+	}
+
+	input {
+		@extend .button;
+		@include span-columns(3);
+		margin: 0 auto;
+
+		&:nth-child(3) {
+			border-left: 1px solid $color-space;
+		}
+	}
+
+	.documentation-buttons {
+		position: relative;
+		top: 25px;
+		text-align: center;
+		color: $color-white;
+
+		h3 {
+			margin: 10px auto;
+		}
+
+		button {
+			width: 320px;
+			margin: 0 auto;
+		}
+	}
+}
+$grid-columns: 14;

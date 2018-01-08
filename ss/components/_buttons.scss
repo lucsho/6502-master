@@ -1,0 +1,23 @@
+button, .button {
+	width: 250px;
+	height: 50px;
+	margin: 10px auto 0;
+	padding: 12px 12px;
+	background: rgba(255, 255, 255, 0.10);
+	color: $color-white;
+	font-family: $title-font;
+	font-weight: 300;
+	border: none;
+	border-radius: 0px;
+	outline: none;
+	text-align: center;
+	-webkit-transition: all 175ms ease;
+	-moz-transition: all 175ms ease;
+	-ms-transition: all 175ms ease;
+	-o-transition: all 175ms ease;
+	transition: all 175ms ease;
+
+	&:hover {
+		background: rgba(255, 255, 255, 0.20);
+	}
+}

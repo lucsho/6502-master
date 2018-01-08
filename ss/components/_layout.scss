@@ -1,0 +1,26 @@
+/* Layout.scss */
+
+div.full-container {
+	@include full-screen;
+}
+
+section.folder {
+	background: $color-capecod;
+	@include span-columns(3);
+}
+
+section.code {
+	background: $color-outerspace;
+	@include span-columns(6);
+}
+
+section.display {
+	background: $color-space;
+	@include span-columns(5);
+}
+
+section.panel {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}

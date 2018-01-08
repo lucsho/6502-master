@@ -1,0 +1,20 @@
+html, body {
+	@include full-screen;
+	min-height: 100%;
+	background-color: $color-outerspace;
+	overflow: hidden;
+}
+
+section {
+	width: 100%;
+	margin: 0;
+	padding: em(60px) 0;
+
+	header h1 {
+		color: $color-white;
+		margin: 0 auto em(3px);
+		font-family: $body-font;
+		font-size: em(36px);
+		text-align: center;
+	}
+}
